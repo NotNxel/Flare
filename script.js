@@ -71,3 +71,6 @@ async function scanForFires() {
       .addTo(resultsLayer);
   });
 }
+
+// Run an initial scan with the default coordinates on page load
+scanForFires();
