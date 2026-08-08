@@ -1,0 +1,102 @@
+:root {
+      --ember: #ff5a1f;
+    }
+
+    * {
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #0b0908;
+      color: #e8ded2;
+      font: 14px/1.4 system-ui;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    /* --- Header bar with title + controls --- */
+
+    header {
+      padding: 12px 20px;
+      display: flex;
+      gap: 14px;
+      align-items: center;
+      border-bottom: 1px solid #2a2320;
+      background: #171310;
+    }
+
+    h1 {
+      font-size: 22px;
+      letter-spacing: .08em;
+    }
+
+    h1 b {
+      color: var(--ember);
+    }
+
+    /* Animated gradient underline beneath the title */
+    h1::after {
+      content: "";
+      display: block;
+      height: 2px;
+      background: linear-gradient(90deg, var(--ember), #ffb02e, transparent);
+      background-size: 200% 100%;
+      animation: slide-underline 3s linear infinite;
+    }
+
+    @keyframes slide-underline {
+      to { background-position: -200% 0; }
+    }
+
+    input, button {
+      background: #0b0908;
+      border: 1px solid #2a2320;
+      color: #e8ded2;
+      padding: 8px 12px;
+      border-radius: 3px;
+    }
+
+    button {
+      background: var(--ember);
+      color: #140b06;
+      font-weight: 700;
+      cursor: pointer;
+      border: 0;
+      transition: .15s;
+    }
+
+    button:hover {
+      box-shadow: 0 0 18px rgba(255, 90, 31, .5);
+    }
+
+    #map {
+      flex: 1;
+    }
+
+    /* --- Pulsing dot used for each fire detection marker --- */
+
+    .detection-dot {
+      border-radius: 50%;
+      background: radial-gradient(circle, #ffb02e, var(--ember) 50%, transparent 72%);
+      animation: pulse 1.8s infinite;
+    }
+
+    @keyframes pulse {
+      0%   { box-shadow: 0 0 0 0 rgba(255, 90, 31, .7); }
+      70%  { box-shadow: 0 0 0 14px rgba(255, 90, 31, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(255, 90, 31, 0); }
+    }
+
+    /* Dark-themed Leaflet popups to match the rest of the UI */
+    .leaflet-popup-content-wrapper,
+    .leaflet-popup-tip {
+      background: #171310;
+      color: #e8ded2;
+    }
+
+    small {
+      color: #9a8c7c;
+    }
