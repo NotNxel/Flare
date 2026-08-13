@@ -60,9 +60,7 @@
       flex: 1;
     }
 
-    /* --- Pulsing dot used for each fire detection marker --- */
-
-    .detection-dot {
+    .dd {
       border-radius: 50%;
       background: radial-gradient(circle, #ffb02e, var(--ember) 50%, transparent 72%);
       animation: pulse 1.8s infinite;
@@ -75,8 +73,8 @@
     }
 
     /* Dark-themed Leaflet popups to match the rest of the UI */
-    .leaflet-popup-content-wrapper,
-    .leaflet-popup-tip {
+    .lpcw,
+    .lpt {
       background: #171310;
       color: #e8ded2;
     }
