@@ -71,14 +71,3 @@
       70%  { box-shadow: 0 0 0 14px rgba(255, 90, 31, 0); }
       100% { box-shadow: 0 0 0 0 rgba(255, 90, 31, 0); }
     }
-
-    /* Dark-themed Leaflet popups to match the rest of the UI */
-    .lpcw,
-    .lpt {
-      background: #171310;
-      color: #e8ded2;
-    }
-
-    small {
-      color: #9a8c7c;
-    }
