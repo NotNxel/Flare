@@ -41,7 +41,7 @@ async function scanForFires() {
 
     const icon = L.divIcon({
       className: '',
-      html: `<div class="detection-dot" style="width:${dotSize}px;height:${dotSize}px;opacity:${opacity}"></div>`,
+      html: `<div class="dd" style="width:${dotSize}px;height:${dotSize}px;opacity:${opacity}"></div>`,
       iconSize: [dotSize, dotSize]
     });
 
