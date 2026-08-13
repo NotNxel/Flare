@@ -1,29 +1,25 @@
-:root {
-      --ember: #ff5a1f;
-    }
-
     * {
-      margin: 0;
       box-sizing: border-box;
+      margin: 0;
     }
 
     body {
-      background: #0b0908;
-      color: #e8ded2;
+      overflow: hidden;
       font: 14px/1.4 system-ui;
       height: 100vh;
       display: flex;
       flex-direction: column;
-      overflow: hidden;
+      background: #0b0908;
+      color: #e8ded2;
     }
 
     header {
       padding: 12px 20px;
       display: flex;
-      gap: 14px;
-      align-items: center;
       border-bottom: 1px solid #2a2320;
-      background: #171310;
+      overflow: hidden;
+      gap: 12px;
+      align-items: center;
     }
 
     h1 {
@@ -32,28 +28,25 @@
     }
 
     h1 b {
-      color: var(--ember);
-    }
-
-    @keyframes slide-underline {
-      to { background-position: -200% 0; }
+      color: #ff5a1f;
     }
 
     input, button {
-      background: #0b0908;
+      border-radius: 4px;
       border: 1px solid #2a2320;
+      padding: 6px 12px;
+      align-items: center;
       color: #e8ded2;
-      padding: 8px 12px;
-      border-radius: 3px;
+      background: #140b06;
     }
 
     button {
-      background: var(--ember);
-      color: #140b06;
-      font-weight: 700;
       cursor: pointer;
+      font-weight: 14px;
+      color: #e8ded2;
+      background: #ff5a1f;
+      transition: 0.15s;
       border: 0;
-      transition: .15s;
     }
 
     #map {
@@ -62,7 +55,7 @@
 
     .dd {
       border-radius: 50%;
-      background: radial-gradient(circle, #ffb02e, var(--ember) 50%, transparent 72%);
+      background: radial-gradient(circle, #ffb02e, #ff5a1f 50%, transparent 72%);
       animation: pulse 1.8s infinite;
     }
 
